@@ -4,241 +4,209 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Digital Portfolio</title>
-
+  <meta name="description" content="Rida Amin's portfolio showcasing Google Ads, Meta Ads, video editing and content writing.">
+  <title>Rida Amin | Digital Marketing Portfolio</title>
   <style>
-    * {
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f4f7fb;
-      color: #243047;
+      background: #f7f8fc;
+      color: #182238;
       line-height: 1.7;
     }
-
-    header {
-      background: linear-gradient(135deg, #14213d, #2563eb);
-      color: white;
-      text-align: center;
-      padding: 70px 20px;
-    }
-
-    header h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 18px;
-      margin: 8px 0;
-    }
-
+    a { text-decoration: none; }
     nav {
-      background: #ffffff;
-      text-align: center;
-      padding: 16px 10px;
-      position: sticky;
-      top: 0;
+      display: flex; justify-content: space-between;
+      align-items: center; padding: 18px 8%;
+      background: white; position: sticky; top: 0;
+      z-index: 10; box-shadow: 0 2px 15px #18223810;
     }
-
-    nav a {
-      color: #14213d;
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: bold;
+    .logo { font-size: 22px; font-weight: bold; color: #315cf5; }
+    .links { display: flex; gap: 22px; flex-wrap: wrap; }
+    .links a { color: #29354b; font-size: 14px; }
+    .links a:hover { color: #315cf5; }
+    header {
+      padding: 95px 8%; color: white;
+      background: linear-gradient(130deg, #101b3c, #315cf5);
     }
-
+    .hero { max-width: 850px; margin: auto; }
+    .tag {
+      display: inline-block; padding: 6px 14px;
+      border: 1px solid #ffffff70; border-radius: 30px;
+      font-size: 13px; margin-bottom: 22px;
+    }
+    h1 { font-size: clamp(38px, 6vw, 65px); line-height: 1.15; }
+    header p { font-size: 19px; margin-top: 20px; color: #e2e8ff; }
+    .buttons { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 30px; }
+    .btn {
+      display: inline-block; padding: 12px 22px;
+      border-radius: 8px; font-weight: bold;
+      background: white; color: #244bd7;
+    }
+    .btn-outline { border: 1px solid white; color: white; background: transparent; }
+    main { max-width: 1100px; margin: auto; padding: 30px 22px; }
     section {
-      max-width: 900px;
-      margin: 28px auto;
-      padding: 28px;
-      background: white;
-      border-radius: 14px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+      background: white; border-radius: 18px;
+      padding: 38px; margin: 25px 0;
+      box-shadow: 0 8px 30px #18223808;
+      scroll-margin-top: 85px;
     }
-
-    h2 {
-      color: #2563eb;
-      margin-top: 0;
+    h2 { font-size: 28px; color: #315cf5; margin-bottom: 18px; }
+    .muted { color: #627087; }
+    .grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 18px; margin-top: 22px;
     }
-
-    .skills {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-      gap: 16px;
+    .card {
+      border: 1px solid #e8ebf3; border-radius: 13px;
+      padding: 23px; background: #fff;
     }
-
-    .skill-card {
-      background: #edf3ff;
-      padding: 18px;
-      border-radius: 10px;
-      border-left: 4px solid #2563eb;
+    .card h3 { margin-bottom: 9px; color: #202d48; }
+    .icon { font-size: 28px; margin-bottom: 10px; }
+    .pill {
+      display: inline-block; background: #edf1ff;
+      color: #3150ce; border-radius: 20px;
+      padding: 5px 11px; margin: 5px 4px 0 0; font-size: 13px;
     }
-
-    .skill-card h3 {
-      margin-top: 0;
-      color: #14213d;
+    .contact-links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
+    .contact-links a {
+      padding: 10px 16px; border: 1px solid #dce2f0;
+      border-radius: 8px; color: #3150ce;
     }
-
-    .project {
-      padding: 16px 0;
-      border-bottom: 1px solid #e5e7eb;
-    }
-
-    .project:last-child {
-      border-bottom: none;
-    }
-
-    .contact-link {
-      display: inline-block;
-      background: #2563eb;
-      color: white;
-      padding: 12px 22px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    footer {
-      background: #14213d;
-      color: white;
-      text-align: center;
-      padding: 24px;
-      margin-top: 35px;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 30px;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 5px;
-      }
-
-      section {
-        margin: 18px 12px;
-        padding: 22px;
-      }
+    footer { text-align: center; padding: 28px; color: #627087; }
+    @media (max-width: 650px) {
+      nav { align-items: flex-start; gap: 12px; flex-direction: column; }
+      .links { gap: 12px; }
+      header { padding: 65px 7%; }
+      section { padding: 25px 20px; }
+      .grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
-
 <body>
 
-  <header>
-    <h1>Hello, I'm Your Name</h1>
-    <p>Digital Marketing & Creative Services</p>
-    <p>Google Ads | Meta Ads | Video Editing | Content Writing</p>
-  </header>
-
-  <nav>
+<nav>
+  <a class="logo" href="#home">Rida Amin.</a>
+  <div class="links">
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
-  </nav>
+  </div>
+</nav>
 
+<header id="home">
+  <div class="hero">
+    <span class="tag">DIGITAL MARKETING & CREATIVE SERVICES</span>
+    <h1>Hi, I'm Rida Amin.</h1>
+    <p>
+      I help businesses grow through digital marketing
+      and creative content.
+    </p>
+    <p>Google Ads · Meta Ads · Video Editing · Content Writing</p>
+    <div class="buttons">
+      <a class="btn" href="#projects">Explore My Work ↓</a>
+      <a class="btn btn-outline" href="#contact">Contact Me</a>
+    </div>
+  </div>
+</header>
+
+<main>
   <section id="about">
     <h2>About Me</h2>
     <p>
-      Welcome to my portfolio! I am interested in digital
-      marketing and creative content. My skills include
-      Google Ads, Meta Ads, video editing, and content writing.
-      I enjoy creating engaging content and learning new ways
-      to help businesses connect with their audiences.
+      I am an aspiring digital marketer with an interest in
+      online advertising, creative video editing, and content writing.
+      I enjoy learning new skills and developing creative ideas
+      that help businesses connect with their audiences.
+    </p>
+    <p class="muted" style="margin-top:12px">
+      I am looking for opportunities to learn, contribute,
+      and grow through practical projects and internships.
     </p>
   </section>
 
   <section id="skills">
     <h2>My Skills</h2>
-
-    <div class="skills">
-      <div class="skill-card">
+    <p class="muted">My key areas of interest and services.</p>
+    <div class="grid">
+      <div class="card">
+        <div class="icon">📈</div>
         <h3>Google Ads</h3>
-        <p>Search advertising and campaign planning.</p>
+        <p class="muted">Search advertising, keyword research, and campaign planning.</p>
       </div>
-
-      <div class="skill-card">
+      <div class="card">
+        <div class="icon">📱</div>
         <h3>Meta Ads</h3>
-        <p>Facebook and Instagram advertising and ad creatives.</p>
+        <p class="muted">Facebook and Instagram ad concepts and audience research.</p>
       </div>
-
-      <div class="skill-card">
+      <div class="card">
+        <div class="icon">🎬</div>
         <h3>Video Editing</h3>
-        <p>Editing videos for social media and digital content.</p>
+        <p class="muted">Short-form videos, social media content, and engaging edits.</p>
       </div>
-
-      <div class="skill-card">
+      <div class="card">
+        <div class="icon">✍️</div>
         <h3>Content Writing</h3>
-        <p>Writing captions, posts, and engaging written content.</p>
+        <p class="muted">Captions, marketing copy, and content ideas for digital platforms.</p>
       </div>
     </div>
   </section>
 
   <section id="projects">
-    <h2>My Sample Projects</h2>
-
-    <div class="project">
-      <h3>Google Ads Campaign Plan</h3>
-      <p>
-        A practice project for planning a search advertising
-        campaign for a sample business.
-      </p>
-    </div>
-
-    <div class="project">
-      <h3>Meta Ads Creative</h3>
-      <p>
-        A sample Facebook and Instagram advertisement concept
-        for a fictional brand.
-      </p>
-    </div>
-
-    <div class="project">
-      <h3>Video Editing Sample</h3>
-      <p>
-        A sample short-form video concept for social media.
-      </p>
-    </div>
-
-    <div class="project">
-      <h3>Content Writing Sample</h3>
-      <p>
-        Sample social media captions and promotional content
-        for a fictional business.
-      </p>
-    </div>
-
-    <p>
-      Note: These are sample project descriptions.
-      Add your actual work or practice samples as you create them.
+    <h2>My Projects</h2>
+    <p class="muted">
+      Selected work and practice projects.
     </p>
+    <div class="grid">
+      <div class="card">
+        <div class="icon">🔎</div>
+        <h3>Google Ads Campaign Plan</h3>
+        <p>A practice campaign concept with keywords, ad copy, and target audience.</p>
+        <span class="pill">Practice Project</span>
+      </div>
+      <div class="card">
+        <div class="icon">📣</div>
+        <h3>Meta Ads Creative</h3>
+        <p>A sample Facebook and Instagram advertising concept for a business.</p>
+        <span class="pill">Practice Project</span>
+      </div>
+      <div class="card">
+        <div class="icon">🎞️</div>
+        <h3>Social Media Video</h3>
+        <p>A sample short video idea designed for social media engagement.</p>
+        <span class="pill">Practice Project</span>
+      </div>
+      <div class="card">
+        <div class="icon">📝</div>
+        <h3>Content Writing Samples</h3>
+        <p>Sample social media captions and promotional copy for a brand.</p>
+        <span class="pill">Practice Project</span>
+      </div>
+    </div>
   </section>
 
   <section id="contact">
-    <h2>Contact Me</h2>
+    <h2>Let's Connect</h2>
     <p>
-      Interested in working together? You can contact me
-      using the email address below.
+      I am open to suitable internship opportunities,
+      creative projects, and professional connections.
+      Feel free to get in touch.
     </p>
-    <p>Email: ameengujjar670@gmail.com</p>
-    <p>
-      GitHub:
-      <a href="https://github.com/riduu55">
-        Visit my GitHub profile
-      </a>
-    </p>
+    <div class="contact-links">
+      <!-- Replace the example email with your real email -->
+      <a href="mailto:YOUR_ameengujjar670@gmail.com">Email Me</a>
+      <!-- Replace with your LinkedIn profile URL -->
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/riduu55-sketch" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
   </section>
+</main>
 
-  <footer>
-    <p>My Digital Portfolio | 2026</p>
-  </footer>
+<footer>
+  © 2026 Rida Amin · Digital Marketing & Creative Services
+</footer>
 
 </body>
 </html>
