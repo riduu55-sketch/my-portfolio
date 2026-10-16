@@ -132,7 +132,7 @@
 <body>
 
   <header>
-    <h1>Hello, I'm Your Name</h1>
+    <h1>Hello, I'm RIDA</h1>
     <p>Digital Marketing & Creative Services</p>
     <p>Google Ads | Meta Ads | Video Editing | Content Writing</p>
   </header>
