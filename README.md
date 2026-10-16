@@ -227,7 +227,7 @@
       Interested in working together? You can contact me
       using the email address below.
     </p>
-    <p>Email: ameengujjar670@gmail.com</p>
+    <p>Email:ameengujjar670@gmail.com</p>
     <p>
       GitHub:
       <a href="https://github.com/riduu55">
